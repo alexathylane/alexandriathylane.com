@@ -8,6 +8,8 @@
 			<div class="footer-contact">
 				<a href="mailto:contact@alexandriathylane.com">contact@alexandriathylane.com</a>
 				<span class="separator">|</span>
+				<a href="https://linkedin.com/in/alexathylane" target="_blank" rel="noopener">LinkedIn</a>
+				<span class="separator">|</span>
 				<a href="https://orcid.org/0009-0000-1657-041X" target="_blank" rel="noopener">ORCID</a>
 			</div>
 			<p class="footer-copyright text-muted">
