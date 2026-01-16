@@ -8,59 +8,42 @@
 
 	<section class="overview">
 		<p class="lead">
-			My research centers on a single question: <strong>How do embodied agents—human or
-			artificial—develop and maintain identity over time?</strong>
+			My current interests center on questions about how embodied agents—human or
+			artificial—develop and sustain identity and agency across time and changing environments.
 		</p>
 		<p>
 			Existing theories describe how agents are socially classified or self-identify, but offer
-			incomplete explanations of the processes through which a sense of self stabilizes or shifts.
-			I work at the intersection of philosophy of mind, cognitive science, and AI to develop
-			mechanistic accounts of identity formation.
+			incomplete accounts of the processes through which a sense of self stabilizes or shifts.
+			Working at the intersection of philosophy of mind and cognitive science, I'm drawn to
+			analytic and mechanistic approaches, drawing on computational modeling when it sharpens
+			explanatory questions.
 		</p>
-	</section>
-
-	<section>
-		<h2>Core Framework</h2>
-		<p>
-			Gender identity (and personal identity more broadly) should be modeled not as a static inner
-			essence nor as pure social performance, but as a <strong>dynamically stabilized, embodied
-			regulatory pattern</strong>—an attractor-like configuration that emerges developmentally
-			through agent-environment coupling.
-		</p>
-		<p>
-			Transgender embodiment serves as a high-information case that reveals how identity patterns can:
-		</p>
-		<ul>
-			<li><strong>Destabilize</strong> (as in dysphoria)</li>
-			<li><strong>Reorganize</strong> (transition)</li>
-			<li><strong>Cohere</strong> (affirmation)</li>
-		</ul>
-		<p>...under affective and social perturbation.</p>
 	</section>
 
 	<section>
 		<h2>Research Lines</h2>
 
 		<div class="research-line">
-			<h3>Theoretical: DST Models of Identity</h3>
+			<h3>Identity as Process</h3>
 			<p>
-				Developing dynamical systems frameworks for understanding how identity stabilizes
-				through embodied, affective, and social processes. My thesis work formalizes
-				gender identity as an attractor landscape shaped by developmental history and ongoing
-				agent-environment coupling.
+				My thesis work argues that gender identity is best understood as a dynamically stabilized
+				regulatory process rather than a static property or social designation. Drawing on
+				dynamical systems theory, I treat transgender embodiment as a high-information case
+				that reveals how identity patterns can destabilize, reorganize, and cohere under
+				affective and social perturbation.
 			</p>
 			<p class="status">
-				<span class="label">Status:</span> PhD writing sample completed; research agenda in development
+				<span class="label">Status:</span> Writing sample completed
 			</p>
 		</div>
 
 		<div class="research-line">
-			<h3>Applied: Queer Robot Companions</h3>
+			<h3>AI and Identity Attribution</h3>
 			<p>
 				Lead architect of the Queer Robot Companion project at Hunter College's TIER Robotics Lab.
-				Exploring what it means to design AI systems that can represent fluid, non-normative
-				identities. The prototype models gender fluidity as a dynamical state variable that
-				evolves through interaction.
+				The project explores what it means for AI systems to represent fluid identities—and
+				raises harder questions about when systems genuinely instantiate identity-like organization
+				versus merely simulate its cues.
 			</p>
 			<p class="status">
 				<span class="label">Status:</span> HRI '26 paper accepted; system demo under review
@@ -68,12 +51,13 @@
 		</div>
 
 		<div class="research-line">
-			<h3>Social: Epistemic Costs of Marginalization</h3>
+			<h3>Cognitive Architecture and Social Structure</h3>
 			<p>
-				Developing an account of how marginalized people bear a disproportionate cognitive tax
-				to reject identity-threatening falsehoods. Synthesizes the Spinozan model of belief with
-				fragmentation of belief to propose a cognitive mechanism underlying stereotype threat
-				and minority stress.
+				How does cognitive architecture interact with social position? My essay <em>Unequal Costs
+				of Disbelief</em> synthesizes the Spinozan model of belief with belief fragmentation to
+				propose a mechanism underlying stereotype threat and minority stress—a structural asymmetry
+				where marginalized people bear disproportionate cognitive costs to reject identity-threatening
+				information.
 			</p>
 			<p class="status">
 				<span class="label">Status:</span> Manuscript in preparation
@@ -82,22 +66,25 @@
 	</section>
 
 	<section>
-		<h2>Methodological Stance</h2>
-		<ul>
-			<li>Theoretical frameworks used as <strong>tools</strong>, not identity markers</li>
-			<li>Methodologically opportunistic—frameworks serve the broader philosophical agenda</li>
-			<li>Trans experience as methodological resource and constraint on bad theory, not sole object of concern</li>
-			<li>Interest in testing philosophical theorizing through computational modeling</li>
-		</ul>
+		<h2>Approach</h2>
+		<p>
+			I treat theoretical frameworks as tools rather than commitments—dynamical systems theory,
+			embodied cognition, and computational modeling are useful insofar as they sharpen explanatory
+			questions. Trans experience figures in my work as a methodological resource and constraint
+			on bad theory, not as the sole object of concern. I'm interested in testing philosophical
+			claims through implementation where possible.
+		</p>
 	</section>
 
 	<section>
-		<h2>Areas of Specialization</h2>
-		<ul class="areas">
-			<li>Philosophy of Mind and Cognitive Science</li>
-			<li>Philosophy of Artificial Intelligence</li>
-			<li>Feminist Philosophy and Philosophy of Gender</li>
-		</ul>
+		<h2>Areas</h2>
+		<p>
+			Primary interests in <strong>philosophy of mind and cognitive science</strong>, especially
+			agency and selfhood over time. Secondary interests in <strong>philosophy of AI</strong>,
+			particularly questions of individuation and AI-mediated social meaning. I also draw on
+			<strong>feminist philosophy and social ontology</strong> as sources of normative constraint
+			and as high-information cases for testing theory.
+		</p>
 	</section>
 </article>
 
@@ -130,15 +117,5 @@
 
 	.status .label {
 		font-weight: 600;
-	}
-
-	.areas {
-		columns: 1;
-	}
-
-	@media (min-width: 500px) {
-		.areas {
-			columns: 2;
-		}
 	}
 </style>
