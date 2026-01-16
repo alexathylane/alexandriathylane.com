@@ -74,6 +74,15 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="engagement">
+		<h2>Engagement</h2>
+		<p>
+			My work has implications for how organizations build and deploy AI systems—especially
+			around identity representation and what models assume about users. I speak to technical
+			and community audiences and am available for talks, workshops, and advisory conversations.
+		</p>
+	</section>
 </div>
 
 <style>
@@ -177,6 +186,22 @@
 		font-size: 0.9rem;
 		color: var(--text-secondary);
 		margin-bottom: var(--space-xs);
+	}
+
+	.engagement {
+		padding: var(--space-lg);
+		background: var(--bg-secondary);
+		border-radius: 8px;
+		border-left: 3px solid var(--accent-purple);
+	}
+
+	.engagement h2 {
+		margin-top: 0;
+	}
+
+	.engagement p {
+		margin-bottom: 0;
+		color: var(--text-secondary);
 	}
 
 	@media (max-width: 600px) {
