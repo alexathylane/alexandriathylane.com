@@ -5,8 +5,11 @@
 
 <div class="home container">
 	<header class="hero">
-		<h1>Alexandria Thylane</h1>
-		<p class="tagline">Philosopher of mind working on identity, embodiment, and AI.</p>
+		<img src="/headshot.jpg" alt="Alexandria Thylane" class="headshot" />
+		<div class="hero-text">
+			<h1>Alexandria Thylane</h1>
+			<p class="tagline">Philosopher of mind working on identity, embodiment, and AI.</p>
+		</div>
 	</header>
 
 	<section class="intro">
@@ -77,7 +80,19 @@
 	}
 
 	.hero {
+		display: flex;
+		align-items: center;
+		gap: var(--space-xl);
 		margin-bottom: var(--space-xl);
+	}
+
+	.headshot {
+		width: 180px;
+		height: 180px;
+		border-radius: 50%;
+		object-fit: cover;
+		object-position: center top;
+		flex-shrink: 0;
 	}
 
 	.hero h1 {
@@ -141,6 +156,16 @@
 	}
 
 	@media (max-width: 600px) {
+		.hero {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.headshot {
+			width: 150px;
+			height: 150px;
+		}
+
 		.hero h1 {
 			font-size: 2.25rem;
 		}
