@@ -157,7 +157,7 @@
 			</li>
 			<li>
 				<span class="cv-item">Founder & Head Organizer, Queer Tech Professionals & Innovators</span>
-				<span class="cv-meta">June 2021–present</span>
+				<span class="cv-meta">2021–2023</span>
 			</li>
 		</ul>
 	</section>
