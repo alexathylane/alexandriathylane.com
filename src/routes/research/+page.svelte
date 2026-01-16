@@ -33,7 +33,7 @@
 				affective and social perturbation.
 			</p>
 			<p class="status">
-				<span class="label">Status:</span> Writing sample completed
+				<span class="label">Status:</span> Manuscript in preparation
 			</p>
 		</div>
 

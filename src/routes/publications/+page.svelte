@@ -34,7 +34,6 @@
 		<ul class="pub-list">
 			<li>
 				<p class="pub-title">Embodied Cognition and Transgender Identity: A Dynamical Systems Perspective</p>
-				<p class="pub-note">PhD Writing Sample</p>
 			</li>
 			<li>
 				<p class="pub-title">Unequal Costs of Disbelief: A Spinozan Account of Propositional Rejection under Marginalization</p>
