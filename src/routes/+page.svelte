@@ -14,14 +14,15 @@
 
 	<section class="intro">
 		<p>
-			I study how embodied agents—human and artificial—develop and maintain identity over time.
-			My work draws on dynamical systems theory to model how a sense of self stabilizes, shifts,
-			or destabilizes under social and affective pressure.
+			I study how embodied agents—human and artificial—develop and sustain identity and agency
+			over time. Working at the intersection of philosophy of mind and cognitive science, I'm
+			drawn to analytic approaches that can explain how a sense of self stabilizes or shifts.
 		</p>
 		<p>
-			Before philosophy, I spent eight years as a software engineer at Apple and Reddit.
-			I bring that technical depth to questions about how AI systems represent human identity—and
-			what they get wrong.
+			I spent eight years as a software engineer at Apple and Reddit before returning to philosophy.
+			That technical background shapes how I work—I'm interested in computational modeling as a
+			way to test and refine philosophical claims, and in what building AI systems reveals about
+			our assumptions when representing identity.
 		</p>
 	</section>
 
