@@ -16,7 +16,7 @@
 		<img src="/headshot.jpg" alt="Alexandria Thylane" class="headshot" />
 		<div class="hero-text">
 			<h1>Alexandria Thylane</h1>
-			<p class="tagline">Philosopher of mind working on identity, embodiment, and AI.</p>
+			<p class="tagline">Philosopher of mind studying identity and agency in embodied agents—human and artificial.</p>
 			<div class="hero-contact">
 				<button type="button" class="email-link" onclick={openEmail} aria-label="Email">
 					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -35,15 +35,14 @@
 
 	<section class="intro">
 		<p>
-			I study how embodied agents—human and artificial—develop and sustain identity and agency
-			over time. Working at the intersection of philosophy of mind and cognitive science, I'm
-			drawn to analytic approaches that can explain how a sense of self stabilizes or shifts.
+			Working at the intersection of philosophy of mind and cognitive science, I study how
+			embodied agents—human and artificial—develop and sustain agency over time.
 		</p>
 		<p>
-			I spent eight years as a software engineer at Apple and Reddit before returning to philosophy.
-			That technical background shapes how I work—I'm interested in computational modeling as a
-			way to test and refine philosophical claims, and in what building AI systems reveals about
-			our assumptions when representing identity.
+			I spent eight years as a software engineer at Apple and Reddit, and worked in the startup
+			ecosystem, including the NSF Innovation Corps to commercialize energy efficient computing. That
+			technical and entrepreneurial background shapes how I work—I'm drawn to computational
+			modeling and how technical systems and their users shape each other.
 		</p>
 	</section>
 
