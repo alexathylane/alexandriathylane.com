@@ -8,6 +8,7 @@
 
 	<div class="cv-download">
 		<a href="/alexandria-thylane-cv.pdf" download class="cv-button">Download PDF</a>
+		<p class="cv-updated">Last updated January 2026</p>
 	</div>
 
 	<section>
@@ -183,6 +184,12 @@
 
 	.cv-button:hover {
 		opacity: 0.9;
+	}
+
+	.cv-updated {
+		margin-top: var(--space-sm);
+		font-size: 0.85rem;
+		color: var(--text-muted);
 	}
 
 	.cv-entry {
