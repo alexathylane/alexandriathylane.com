@@ -10,50 +10,53 @@
 	let sections: Section[] = $state([]);
 	let activeSection: string | null = $state(null);
 
-	onMount(() => {
-		// Find all h2 elements with IDs
+	function scanHeadings() {
 		const headings = document.querySelectorAll('main h2[id]');
 		sections = Array.from(headings).map((h) => ({
 			id: h.id,
 			title: h.textContent || ''
 		}));
+		updateActiveSection();
+	}
 
+	function updateActiveSection() {
 		if (sections.length === 0) return;
 
-		// Set up Intersection Observer
-		const observer = new IntersectionObserver(
-			(entries) => {
-				for (const entry of entries) {
-					if (entry.isIntersecting) {
-						activeSection = entry.target.id;
-					}
+		const scrollY = window.scrollY;
+		const offset = 120; // Account for sticky header
+
+		// Find the section closest to the top of the viewport
+		let current: string | null = null;
+		for (const section of sections) {
+			const element = document.getElementById(section.id);
+			if (element) {
+				const top = element.getBoundingClientRect().top + scrollY - offset;
+				if (scrollY >= top) {
+					current = section.id;
 				}
-			},
-			{
-				rootMargin: '-80px 0px -70% 0px',
-				threshold: 0
 			}
-		);
+		}
 
-		headings.forEach((heading) => observer.observe(heading));
+		// Default to first section if we're at the very top
+		if (!current && sections.length > 0) {
+			current = sections[0].id;
+		}
 
-		return () => observer.disconnect();
+		activeSection = current;
+	}
+
+	onMount(() => {
+		scanHeadings();
+
+		window.addEventListener('scroll', updateActiveSection, { passive: true });
+		return () => window.removeEventListener('scroll', updateActiveSection);
 	});
 
 	// Re-scan when route changes
 	$effect(() => {
 		$page.url.pathname;
-		sections = [];
-		activeSection = null;
-
 		// Small delay to let new page content render
-		setTimeout(() => {
-			const headings = document.querySelectorAll('main h2[id]');
-			sections = Array.from(headings).map((h) => ({
-				id: h.id,
-				title: h.textContent || ''
-			}));
-		}, 50);
+		setTimeout(scanHeadings, 50);
 	});
 
 	function scrollToSection(id: string) {
