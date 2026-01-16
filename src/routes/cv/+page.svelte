@@ -21,6 +21,11 @@
 			<p class="cv-detail">GPA: 3.92</p>
 			<p class="cv-detail">Independent Thesis: 4E/DST Models of Gender Identity</p>
 			<p class="cv-detail">Advisors: Dr. Daniel Harris (Philosophy) & Dr. Raj Korpan (Computer Science)</p>
+			<p class="cv-detail">Graduate Coursework (CUNY Graduate Center):</p>
+			<ul class="cv-bullets">
+				<li>Representations, Attitudes, & Persuasion — Eric Mandelbaum (Fall 2025)</li>
+				<li>Group Minds — Muhammad Ali Khalidi (Spring 2026)</li>
+			</ul>
 		</div>
 
 		<div class="cv-entry">
@@ -80,6 +85,33 @@
 				<li>Led technical architecture and ethical design of a queer-affirming robot companion</li>
 				<li>Co-authored peer-reviewed full paper accepted to HRI 2026</li>
 				<li>Authored system demonstration paper (currently under review)</li>
+			</ul>
+		</div>
+
+		<div class="cv-entry">
+			<div class="cv-header">
+				<span class="cv-title">Undergraduate Researcher</span>
+				<span class="cv-date">Fall 2014</span>
+			</div>
+			<p class="cv-org">Department of Computer Science, Texas State University</p>
+			<ul class="cv-bullets">
+				<li>Designed initial experimental protocol and detection algorithm to correlate heart rate variability with sleep onset under Dr. Xiao Chen</li>
+				<li>Provided proof-of-concept supporting later work published in IEEE MASS 2015</li>
+			</ul>
+		</div>
+	</section>
+
+	<section>
+		<h2>Teaching Experience</h2>
+		<div class="cv-entry">
+			<div class="cv-header">
+				<span class="cv-title">Discussion Section Leader, Intro to Women & Gender Studies</span>
+				<span class="cv-date">Fall 2024</span>
+			</div>
+			<p class="cv-org">Hunter College</p>
+			<ul class="cv-bullets">
+				<li>Led weekly small-group discussion section for first-year students</li>
+				<li>Prepared assigned readings, facilitated discussion, and guided structured activities</li>
 			</ul>
 		</div>
 	</section>
