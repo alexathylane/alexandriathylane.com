@@ -7,7 +7,7 @@
 	<h1>Curriculum Vitae</h1>
 
 	<div class="cv-download">
-		<p class="cv-note">Full PDF available upon request: <a href="mailto:contact@alexandriathylane.com">contact@alexandriathylane.com</a></p>
+		<a href="/alexandria-thylane-cv.pdf" download class="cv-button">Download PDF</a>
 	</div>
 
 	<section>
@@ -171,9 +171,18 @@
 		margin-bottom: var(--space-xl);
 	}
 
-	.cv-note {
-		color: var(--text-secondary);
-		font-style: italic;
+	.cv-button {
+		display: inline-block;
+		padding: var(--space-sm) var(--space-lg);
+		background: var(--accent-purple);
+		color: var(--bg-primary);
+		border-radius: 4px;
+		font-weight: 500;
+		transition: opacity var(--transition-fast);
+	}
+
+	.cv-button:hover {
+		opacity: 0.9;
 	}
 
 	.cv-entry {
