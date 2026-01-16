@@ -7,7 +7,8 @@
 		{ href: '/research', label: 'Research' },
 		{ href: '/publications', label: 'Publications' },
 		{ href: '/cv', label: 'CV' },
-		{ href: '/projects', label: 'Projects' }
+		{ href: '/projects', label: 'Projects' },
+		{ href: 'https://notes.alexandriathylane.com', label: 'Notes', external: true }
 	];
 
 	function isActive(href: string, pathname: string): boolean {
@@ -23,12 +24,18 @@
 		<ul class="nav-links">
 			{#each links as link}
 				<li>
-					<a
-						href={link.href}
-						class:active={isActive(link.href, $page.url.pathname)}
-					>
-						{link.label}
-					</a>
+					{#if link.external}
+						<a href={link.href} target="_blank" rel="noopener">
+							{link.label}
+						</a>
+					{:else}
+						<a
+							href={link.href}
+							class:active={isActive(link.href, $page.url.pathname)}
+						>
+							{link.label}
+						</a>
+					{/if}
 				</li>
 			{/each}
 		</ul>
