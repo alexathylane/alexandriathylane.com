@@ -54,9 +54,9 @@
 			humans, what are we assuming about minds?
 		</p>
 		<p>
-			My approach is rooted in 4E cognition (embodied, embedded, enactive, extended) and dynamical
-			systems theory. I'm interested in mechanistic explanations that connect phenomenology to
-			process—theories that respect both lived experience and empirical constraint.
+			My approach draws on dynamical systems theory and embodied cognition. I'm interested in
+			mechanistic explanations that connect phenomenology to process—theories that respect both
+			lived experience and empirical constraint.
 		</p>
 		<p>
 			I bring my engineering training to this work. I think in terms of systems, architectures,
@@ -138,7 +138,7 @@
 			<li>Philosophy of Mind and Cognitive Science</li>
 			<li>Philosophy of Artificial Intelligence</li>
 			<li>Feminist Philosophy and Philosophy of Gender</li>
-			<li>Embodied and 4E Cognition</li>
+			<li>Embodied Cognition</li>
 			<li>Human-Robot Interaction</li>
 		</ul>
 	</section>

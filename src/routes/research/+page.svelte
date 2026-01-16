@@ -44,8 +44,8 @@
 		<div class="research-line">
 			<h3>Theoretical: DST Models of Identity</h3>
 			<p>
-				Developing dynamical systems and 4E cognition frameworks for understanding how identity
-				stabilizes through embodied, affective, and social processes. My thesis work formalizes
+				Developing dynamical systems frameworks for understanding how identity stabilizes
+				through embodied, affective, and social processes. My thesis work formalizes
 				gender identity as an attractor landscape shaped by developmental history and ongoing
 				agent-environment coupling.
 			</p>
@@ -84,7 +84,7 @@
 	<section>
 		<h2>Methodological Stance</h2>
 		<ul>
-			<li>DST/4E/Predictive Processing used as <strong>tools</strong>, not identity markers</li>
+			<li>Theoretical frameworks used as <strong>tools</strong>, not identity markers</li>
 			<li>Methodologically opportunistic—frameworks serve the broader philosophical agenda</li>
 			<li>Trans experience as methodological resource and constraint on bad theory, not sole object of concern</li>
 			<li>Interest in testing philosophical theorizing through computational modeling</li>

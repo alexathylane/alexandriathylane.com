@@ -13,8 +13,8 @@
 		<p>
 			I study how embodied agents—human and artificial—develop and maintain identity over time.
 			My work sits at the intersection of philosophy of mind, cognitive science, and AI, drawing
-			on dynamical systems theory and 4E cognition to model the processes through which a sense
-			of self stabilizes, shifts, or destabilizes.
+			on dynamical systems theory to model the processes through which a sense of self stabilizes,
+			shifts, or destabilizes.
 		</p>
 		<p>
 			Before returning to philosophy, I spent eight years as a software engineer at Reddit and Apple.
@@ -41,7 +41,7 @@
 		</p>
 		<p><strong>Current projects:</strong></p>
 		<ul>
-			<li>DST/4E models of gender identity and embodied cognition</li>
+			<li>Dynamical systems models of gender identity</li>
 			<li>Queer-affirming robot companions (HRI '26)</li>
 			<li>Epistemic costs of marginalization</li>
 		</ul>

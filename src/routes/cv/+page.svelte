@@ -65,7 +65,7 @@
 			<p class="cv-org">CUNY Graduate Center</p>
 			<ul class="cv-bullets">
 				<li>Selected for competitive doctoral preparation fellowship</li>
-				<li>Developing philosophy research proposal on 4E cognition and gender identity</li>
+				<li>Developing philosophy research proposal on embodied cognition and gender identity</li>
 				<li>Presenting capstone research at CUNY Pipeline Symposium (May 2026)</li>
 			</ul>
 		</div>
