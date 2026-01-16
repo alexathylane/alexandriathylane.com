@@ -34,28 +34,6 @@
 		</ul>
 	</section>
 
-	<section class="research">
-		<h2>Research</h2>
-		<p class="question">
-			How do embodied agents develop and sustain identity across time and changing environments?
-		</p>
-		<div class="projects">
-			<div class="project">
-				<h3>Theoretical</h3>
-				<p>Dynamical systems models of gender identity as a case study for identity formation broadly.</p>
-			</div>
-			<div class="project">
-				<h3>Applied</h3>
-				<p>Queer Robot Companion project—designing AI that can represent fluid, non-normative identities. <span class="note">HRI '26 paper accepted.</span></p>
-			</div>
-			<div class="project">
-				<h3>Social</h3>
-				<p>How marginalized people bear disproportionate cognitive costs to reject identity-threatening information.</p>
-			</div>
-		</div>
-		<p><a href="/research">More on my research &rarr;</a></p>
-	</section>
-
 	<section class="background">
 		<h2>Background</h2>
 		<div class="bg-grid">
@@ -137,44 +115,6 @@
 
 	.current li {
 		margin-bottom: var(--space-sm);
-	}
-
-	.question {
-		font-size: 1.1rem;
-		font-style: italic;
-		color: var(--text-secondary);
-		margin-bottom: var(--space-lg);
-	}
-
-	.projects {
-		display: grid;
-		gap: var(--space-md);
-		margin-bottom: var(--space-lg);
-	}
-
-	.project {
-		padding: var(--space-md);
-		background: var(--bg-secondary);
-		border-radius: 8px;
-	}
-
-	.project h3 {
-		margin: 0 0 var(--space-xs) 0;
-		font-size: 0.9rem;
-		text-transform: uppercase;
-		letter-spacing: 0.5px;
-		color: var(--accent-purple);
-	}
-
-	.project p {
-		margin: 0;
-		color: var(--text-secondary);
-		font-size: 0.95rem;
-	}
-
-	.project .note {
-		color: var(--accent-purple);
-		font-weight: 500;
 	}
 
 	.bg-grid {
