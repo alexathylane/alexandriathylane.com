@@ -4,7 +4,6 @@
 
 	const links = [
 		{ href: '/', label: 'Home' },
-		{ href: '/about', label: 'About' },
 		{ href: '/research', label: 'Research' },
 		{ href: '/publications', label: 'Publications' },
 		{ href: '/cv', label: 'CV' },

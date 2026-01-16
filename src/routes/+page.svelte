@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Alexandria Thylane | Philosopher of Mind & Cognitive Scientist</title>
+	<title>Alexandria Thylane | Philosopher of Mind</title>
 	<meta name="description" content="Philosopher of mind working on identity, embodiment, and AI. Research Fellow at CUNY Pipeline Program." />
 </svelte:head>
 
@@ -15,62 +15,73 @@
 	<section class="intro">
 		<p>
 			I study how embodied agents—human and artificial—develop and maintain identity over time.
-			My work sits at the intersection of philosophy of mind, cognitive science, and AI, drawing
-			on dynamical systems theory to model the processes through which a sense of self stabilizes,
-			shifts, or destabilizes.
+			My work draws on dynamical systems theory to model how a sense of self stabilizes, shifts,
+			or destabilizes under social and affective pressure.
 		</p>
 		<p>
-			Before returning to philosophy, I spent eight years as a software engineer at Reddit and Apple.
-			I bring that technical depth to questions about how AI systems represent human identity and
-			how embodied cognition shapes agency.
+			Before philosophy, I spent eight years as a software engineer at Apple and Reddit.
+			I bring that technical depth to questions about how AI systems represent human identity—and
+			what they get wrong.
 		</p>
 	</section>
 
 	<section class="current">
 		<h2>Current</h2>
 		<ul>
-			<li><strong>Research Fellow</strong>, CUNY Pipeline Program (2025–2026)</li>
+			<li><strong>Research Fellow</strong>, CUNY Pipeline Program</li>
 			<li><strong>Lead Architect</strong>, Queer Robot Companion Project, TIER Robotics Lab</li>
-			<li><strong>BA in Mind, Gender, and Artificial Intelligence</strong>, CUNY Baccalaureate (expected Summer 2026)</li>
-			<li>PhD applicant for Fall 2026</li>
+			<li><strong>PhD applicant</strong>, Fall 2026</li>
 		</ul>
 	</section>
 
-	<section class="research-focus">
-		<h2>Research Focus</h2>
+	<section class="research">
+		<h2>Research</h2>
 		<p class="question">
-			<strong>Central question:</strong> How do embodied agents develop and sustain identity
-			and agency across time and changing environments?
+			How do embodied agents develop and sustain identity across time and changing environments?
 		</p>
-		<p><strong>Current projects:</strong></p>
-		<ul>
-			<li>Dynamical systems models of gender identity</li>
-			<li>Queer-affirming robot companions (HRI '26)</li>
-			<li>Epistemic costs of marginalization</li>
-		</ul>
-		<p><a href="/research">Read more about my research &rarr;</a></p>
+		<div class="projects">
+			<div class="project">
+				<h3>Theoretical</h3>
+				<p>Dynamical systems models of gender identity as a case study for identity formation broadly.</p>
+			</div>
+			<div class="project">
+				<h3>Applied</h3>
+				<p>Queer Robot Companion project—designing AI that can represent fluid, non-normative identities. <span class="note">HRI '26 paper accepted.</span></p>
+			</div>
+			<div class="project">
+				<h3>Social</h3>
+				<p>How marginalized people bear disproportionate cognitive costs to reject identity-threatening information.</p>
+			</div>
+		</div>
+		<p><a href="/research">More on my research &rarr;</a></p>
 	</section>
 
-	<section class="recent">
-		<h2>Recent</h2>
-		<ul class="recent-list">
-			<li>
-				<span class="label">HRI '26</span>
-				<span>"Not the Intended User: Queer Perspectives on Identity, Risk, and Trust in Robot Companions"</span>
-				<span class="note">(23.2% acceptance rate)</span>
-			</li>
-			<li>
-				<span class="label">CUNY Pipeline Symposium</span>
-				<span>"Modeling Gender Identity as a Metastable Process"</span>
-				<span class="note">(May 2026)</span>
-			</li>
-			<li>
-				<span class="label">Fellowship</span>
-				<span>Thomas W. Smith Academic Excellence Fellowship</span>
-				<span class="note">(2025–2026)</span>
-			</li>
-		</ul>
-		<p><a href="/publications">Publications &rarr;</a></p>
+	<section class="background">
+		<h2>Background</h2>
+		<div class="bg-grid">
+			<div>
+				<h3>Education</h3>
+				<p>BA, Mind, Gender & AI — CUNY Baccalaureate (2026)</p>
+				<p>BA, Computer Science — Texas State (2015)</p>
+			</div>
+			<div>
+				<h3>Industry</h3>
+				<p>Senior Software Engineer, Apple</p>
+				<p>Senior iOS Engineer, Reddit</p>
+			</div>
+			<div>
+				<h3>Areas</h3>
+				<p>Philosophy of Mind</p>
+				<p>Philosophy of AI</p>
+				<p>Feminist Philosophy</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact">
+		<h2>Contact</h2>
+		<p><a href="mailto:contact@alexandriathylane.com">contact@alexandriathylane.com</a></p>
+		<p><a href="/cv">View CV &rarr;</a></p>
 	</section>
 </div>
 
@@ -119,40 +130,75 @@
 		margin-bottom: var(--space-xl);
 	}
 
-	.question {
-		font-style: italic;
-	}
-
-	.recent-list {
+	.current ul {
 		list-style: none;
 		padding: 0;
 	}
 
-	.recent-list li {
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--space-sm);
-		align-items: baseline;
-		margin-bottom: var(--space-md);
-		padding-bottom: var(--space-md);
-		border-bottom: 1px solid var(--bg-tertiary);
+	.current li {
+		margin-bottom: var(--space-sm);
 	}
 
-	.recent-list li:last-child {
-		border-bottom: none;
+	.question {
+		font-size: 1.1rem;
+		font-style: italic;
+		color: var(--text-secondary);
+		margin-bottom: var(--space-lg);
 	}
 
-	.recent-list .label {
-		font-weight: 600;
-		color: var(--accent-purple);
+	.projects {
+		display: grid;
+		gap: var(--space-md);
+		margin-bottom: var(--space-lg);
+	}
+
+	.project {
+		padding: var(--space-md);
+		background: var(--bg-secondary);
+		border-radius: 8px;
+	}
+
+	.project h3 {
+		margin: 0 0 var(--space-xs) 0;
 		font-size: 0.9rem;
 		text-transform: uppercase;
 		letter-spacing: 0.5px;
+		color: var(--accent-purple);
 	}
 
-	.recent-list .note {
-		color: var(--text-muted);
+	.project p {
+		margin: 0;
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+	}
+
+	.project .note {
+		color: var(--accent-purple);
+		font-weight: 500;
+	}
+
+	.bg-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--space-lg);
+	}
+
+	.bg-grid h3 {
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		color: var(--accent-purple);
+		margin-bottom: var(--space-sm);
+	}
+
+	.bg-grid p {
 		font-size: 0.9rem;
+		color: var(--text-secondary);
+		margin-bottom: var(--space-xs);
+	}
+
+	.contact p {
+		margin-bottom: var(--space-sm);
 	}
 
 	@media (max-width: 600px) {
@@ -172,6 +218,10 @@
 
 		.tagline {
 			font-size: 1.1rem;
+		}
+
+		.bg-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
