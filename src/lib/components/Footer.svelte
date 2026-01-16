@@ -1,12 +1,20 @@
 <script lang="ts">
 	const currentYear = new Date().getFullYear();
+
+	function openEmail() {
+		const user = 'contact';
+		const domain = 'alexandriathylane.com';
+		window.location.href = `mailto:${user}@${domain}`;
+	}
 </script>
 
 <footer class="footer">
 	<div class="container">
 		<div class="footer-content">
 			<div class="footer-contact">
-				<a href="mailto:contact@alexandriathylane.com">contact@alexandriathylane.com</a>
+				<button type="button" class="email-link" onclick={openEmail}>
+					<span>contact</span><span>@</span><span>alexandriathylane.com</span>
+				</button>
 				<span class="separator">|</span>
 				<a href="https://www.linkedin.com/in/alexandriathylane/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn">
 					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -49,8 +57,19 @@
 		color: var(--text-secondary);
 	}
 
-	.footer-contact a:hover {
+	.footer-contact a:hover,
+	.footer-contact button:hover {
 		color: var(--accent-purple);
+	}
+
+	.email-link {
+		background: none;
+		border: none;
+		padding: 0;
+		font: inherit;
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+		cursor: pointer;
 	}
 
 	.icon-link {

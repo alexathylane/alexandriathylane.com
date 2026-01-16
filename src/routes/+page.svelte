@@ -1,3 +1,11 @@
+<script lang="ts">
+	function openEmail() {
+		const user = 'contact';
+		const domain = 'alexandriathylane.com';
+		window.location.href = `mailto:${user}@${domain}`;
+	}
+</script>
+
 <svelte:head>
 	<title>Alexandria Thylane | Philosopher of Mind</title>
 	<meta name="description" content="Philosopher of mind working on identity, embodiment, and AI. Research Fellow at CUNY Pipeline Program." />
@@ -10,7 +18,9 @@
 			<h1>Alexandria Thylane</h1>
 			<p class="tagline">Philosopher of mind working on identity, embodiment, and AI.</p>
 			<div class="hero-contact">
-				<a href="mailto:contact@alexandriathylane.com">contact@alexandriathylane.com</a>
+				<button type="button" class="email-link" onclick={openEmail}>
+					<span>contact</span><span>@</span><span>alexandriathylane.com</span>
+				</button>
 				<a href="https://www.linkedin.com/in/alexandriathylane/" target="_blank" rel="noopener" aria-label="LinkedIn">
 					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
 						<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -113,8 +123,19 @@
 		align-items: center;
 	}
 
-	.hero-contact a:hover {
+	.hero-contact a:hover,
+	.hero-contact button:hover {
 		color: var(--accent-purple);
+	}
+
+	.email-link {
+		background: none;
+		border: none;
+		padding: 0;
+		font: inherit;
+		color: var(--text-secondary);
+		font-size: 0.9rem;
+		cursor: pointer;
 	}
 
 	.intro {
