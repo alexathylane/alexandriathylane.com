@@ -47,7 +47,7 @@
 	</section>
 
 	<section class="current">
-		<h2>Current</h2>
+		<h2 id="current">Current</h2>
 		<ul>
 			<li><strong>Research Fellow</strong>, CUNY Pipeline Program</li>
 			<li><strong>Lead Architect</strong>, Queer Robot Companion Project, TIER Robotics Lab</li>
@@ -56,7 +56,7 @@
 	</section>
 
 	<section class="background">
-		<h2>Background</h2>
+		<h2 id="background">Background</h2>
 		<div class="bg-grid">
 			<div>
 				<h3>Education</h3>
@@ -78,7 +78,7 @@
 	</section>
 
 	<section class="engagement">
-		<h2>Engagement</h2>
+		<h2 id="engagement">Engagement</h2>
 		<p>
 			My work has implications for how organizations build and deploy AI systems—especially
 			around identity representation and what models assume about users. I speak to technical

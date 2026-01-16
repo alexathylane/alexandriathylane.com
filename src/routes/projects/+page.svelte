@@ -12,7 +12,7 @@
 	</p>
 
 	<section class="project">
-		<h2>Queer Robot Companion (Pax)</h2>
+		<h2 id="queer-robot-companion">Queer Robot Companion (Pax)</h2>
 		<p class="project-meta">2025–Present | TIER Robotics Lab, Hunter College</p>
 		<p>
 			Lead architect of a queer-affirming robot companion system. The prototype models gender
@@ -31,7 +31,7 @@
 	</section>
 
 	<section class="project">
-		<h2>iOS Development at Apple & Reddit</h2>
+		<h2 id="ios-development">iOS Development at Apple & Reddit</h2>
 		<p class="project-meta">2017–2023 | Industry</p>
 		<p>
 			Eight years of professional software engineering at elite tech companies, primarily
@@ -55,7 +55,7 @@
 	</section>
 
 	<section class="project">
-		<h2>Research Tools & Prototypes</h2>
+		<h2 id="research-tools">Research Tools & Prototypes</h2>
 		<p class="project-meta">Ongoing</p>
 		<p>
 			Various computational tools for exploring philosophical questions:

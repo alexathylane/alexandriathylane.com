@@ -12,7 +12,7 @@
 	</div>
 
 	<section>
-		<h2>Education</h2>
+		<h2 id="education">Education</h2>
 		<div class="cv-entry">
 			<div class="cv-header">
 				<span class="cv-title">City University of New York (CUNY Baccalaureate)</span>
@@ -40,7 +40,7 @@
 	</section>
 
 	<section>
-		<h2>Fellowships & Honors</h2>
+		<h2 id="fellowships-honors">Fellowships & Honors</h2>
 		<ul class="cv-list">
 			<li>
 				<span class="cv-item">CUNY Pipeline Fellowship</span>
@@ -62,7 +62,7 @@
 	</section>
 
 	<section>
-		<h2>Research Experience</h2>
+		<h2 id="research-experience">Research Experience</h2>
 		<div class="cv-entry">
 			<div class="cv-header">
 				<span class="cv-title">Research Fellow, CUNY Pipeline Program</span>
@@ -103,7 +103,7 @@
 	</section>
 
 	<section>
-		<h2>Teaching Experience</h2>
+		<h2 id="teaching-experience">Teaching Experience</h2>
 		<div class="cv-entry">
 			<div class="cv-header">
 				<span class="cv-title">Discussion Section Leader, Intro to Women & Gender Studies</span>
@@ -118,7 +118,7 @@
 	</section>
 
 	<section>
-		<h2>Industry Experience</h2>
+		<h2 id="industry-experience">Industry Experience</h2>
 		<div class="cv-entry">
 			<div class="cv-header">
 				<span class="cv-title">Senior Software Engineer</span>
@@ -145,7 +145,7 @@
 	</section>
 
 	<section>
-		<h2>Service & Engagement</h2>
+		<h2 id="service-engagement">Service & Engagement</h2>
 		<ul class="cv-list">
 			<li>
 				<span class="cv-item">Invited Panelist, Women Speak Pride</span>

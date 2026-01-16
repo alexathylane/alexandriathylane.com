@@ -21,7 +21,7 @@
 	</section>
 
 	<section>
-		<h2>Research Lines</h2>
+		<h2 id="research-lines">Research Lines</h2>
 
 		<div class="research-line">
 			<h3>Identity as Process</h3>
@@ -66,7 +66,7 @@
 	</section>
 
 	<section>
-		<h2>Approach</h2>
+		<h2 id="approach">Approach</h2>
 		<p>
 			I treat theoretical frameworks as tools rather than commitments—dynamical systems theory,
 			embodied cognition, and computational modeling are useful insofar as they sharpen explanatory
@@ -77,7 +77,7 @@
 	</section>
 
 	<section>
-		<h2>Areas</h2>
+		<h2 id="areas">Areas</h2>
 		<p>
 			Primary interests in <strong>philosophy of mind and cognitive science</strong>, especially
 			agency and selfhood over time. Secondary interests in <strong>philosophy of AI</strong>,

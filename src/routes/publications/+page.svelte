@@ -7,7 +7,7 @@
 	<h1>Publications</h1>
 
 	<section>
-		<h2>Refereed Conference Proceedings</h2>
+		<h2 id="refereed-proceedings">Refereed Conference Proceedings</h2>
 		<ul class="pub-list">
 			<li>
 				<p class="pub-title">Not the Intended User: Queer Perspectives on Identity, Risk, and Trust in Robot Companions</p>
@@ -19,7 +19,7 @@
 	</section>
 
 	<section>
-		<h2>Manuscripts Under Review</h2>
+		<h2 id="under-review">Manuscripts Under Review</h2>
 		<ul class="pub-list">
 			<li>
 				<p class="pub-title">Pax: A Queer-Affirming Robot Companion for the Home</p>
@@ -30,7 +30,7 @@
 	</section>
 
 	<section>
-		<h2>Manuscripts in Preparation</h2>
+		<h2 id="in-preparation">Manuscripts in Preparation</h2>
 		<ul class="pub-list">
 			<li>
 				<p class="pub-title">Embodied Cognition and Transgender Identity: A Dynamical Systems Perspective</p>
@@ -42,7 +42,7 @@
 	</section>
 
 	<section>
-		<h2>Presentations</h2>
+		<h2 id="presentations">Presentations</h2>
 		<ul class="pub-list">
 			<li>
 				<p class="pub-title">Modeling Gender Identity as a Metastable Process: A 4E Cognition Framework</p>

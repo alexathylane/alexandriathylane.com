@@ -2,6 +2,7 @@
 	import '../app.css';
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import TableOfContents from '$lib/components/TableOfContents.svelte';
 
 	let { children } = $props();
 </script>
@@ -14,9 +15,15 @@
 <div class="site-wrapper">
 	<Nav />
 
-	<main class="main-content">
-		{@render children()}
-	</main>
+	<div class="content-wrapper">
+		<main class="main-content">
+			{@render children()}
+		</main>
+
+		<aside class="toc-sidebar">
+			<TableOfContents />
+		</aside>
+	</div>
 
 	<Footer />
 </div>
@@ -28,13 +35,34 @@
 		flex-direction: column;
 	}
 
-	.main-content {
+	.content-wrapper {
 		flex: 1;
+		display: flex;
+		max-width: 1100px;
+		margin: 0 auto;
+		width: 100%;
 		padding: var(--space-xl) var(--space-md);
 	}
 
+	.main-content {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.toc-sidebar {
+		width: 200px;
+		flex-shrink: 0;
+		display: block;
+	}
+
+	@media (max-width: 900px) {
+		.toc-sidebar {
+			display: none;
+		}
+	}
+
 	@media (max-width: 600px) {
-		.main-content {
+		.content-wrapper {
 			padding: var(--space-lg) var(--space-md);
 		}
 	}
