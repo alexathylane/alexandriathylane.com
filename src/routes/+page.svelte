@@ -1,12 +1,12 @@
 <svelte:head>
 	<title>Alexandria Thylane | Philosopher of Mind & Cognitive Scientist</title>
-	<meta name="description" content="Philosopher of mind and cognitive scientist working on identity, embodiment, and AI. Research Fellow at CUNY Pipeline Program." />
+	<meta name="description" content="Philosopher of mind working on identity, embodiment, and AI. Research Fellow at CUNY Pipeline Program." />
 </svelte:head>
 
 <div class="home container">
 	<header class="hero">
 		<h1>Alexandria Thylane</h1>
-		<p class="tagline">Philosopher of mind and cognitive scientist working on identity, embodiment, and AI.</p>
+		<p class="tagline">Philosopher of mind working on identity, embodiment, and AI.</p>
 	</header>
 
 	<section class="intro">

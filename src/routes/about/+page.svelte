@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>About | Alexandria Thylane</title>
-	<meta name="description" content="Philosopher of mind and cognitive scientist with a background in software engineering. Learn about my journey from tech to philosophy." />
+	<meta name="description" content="Philosopher of mind with a background in software engineering. Learn about my journey from tech to philosophy." />
 </svelte:head>
 
 <article class="about container">
@@ -8,8 +8,7 @@
 
 	<section class="opening">
 		<p class="lead">
-			I'm Alexandria Thylane—a philosopher of mind and cognitive scientist with a background
-			in software engineering.
+			I'm Alexandria Thylane—a philosopher of mind with a background in software engineering.
 		</p>
 		<p>
 			For eight years, I built software at companies like Apple and Reddit. I designed systems,
