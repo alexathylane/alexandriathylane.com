@@ -40,9 +40,13 @@
 		</p>
 		<p>
 			I spent eight years as a software engineer at Apple and Reddit, and worked in the startup
-			ecosystem, including the NSF Innovation Corps to commercialize energy efficient computing. That
-			technical and entrepreneurial background shapes how I work—I'm drawn to computational
-			modeling and how technical systems and their users shape each other.
+			ecosystem, including the NSF Innovation Corps to commercialize energy efficient computing.
+		</p>
+		<p>
+			I am a multiracial transgender woman, born and raised in San Antonio, Texas, and currently
+			based in New York City after seven years in the San Francisco Bay Area. I publish under the
+			chosen name Alexandria Thylane; my surname is Rohn. <em>Thylane</em> is a modern French
+			spelling inspired by the Vietnamese names Thủy ("water") and Lan ("orchid").
 		</p>
 	</section>
 

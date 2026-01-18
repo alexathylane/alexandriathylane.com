@@ -5,7 +5,6 @@
 	const links = [
 		{ href: '/', label: 'Home' },
 		{ href: '/research', label: 'Research' },
-		{ href: '/publications', label: 'Publications' },
 		{ href: '/cv', label: 'CV' },
 		{ href: '/projects', label: 'Projects' },
 		{ href: 'https://notes.alexandriathylane.com', label: 'Notes', external: true }

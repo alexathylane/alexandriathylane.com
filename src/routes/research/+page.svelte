@@ -6,18 +6,21 @@
 <article class="research container">
 	<h1>Research</h1>
 
-	<section class="overview">
-		<p class="lead">
-			My current interests center on questions about how embodied agents—human or
-			artificial—develop and sustain identity and agency across time and changing environments.
-		</p>
+	<section class="snapshot">
+		<h2 id="snapshot">Research Snapshot</h2>
 		<p>
-			Existing theories describe how agents are socially classified or self-identify, but offer
-			incomplete accounts of the processes through which a sense of self stabilizes or shifts.
-			Working at the intersection of philosophy of mind and cognitive science, I'm drawn to
-			analytic and mechanistic approaches, drawing on computational modeling when it sharpens
-			explanatory questions.
+			I study how embodied agents—human or artificial—develop and sustain identity and agency across time and changing environments. Existing theories describe how agents are socially classified or self-identify, but offer incomplete accounts of the processes through which a sense of self stabilizes or shifts. I work at the intersection of philosophy of mind and cognitive science, favoring analytic and mechanistic approaches—my technical background draws me to computational modeling and to how technical systems and their users shape each other. The aim is to build integrated accounts of identity that do justice to both first-person experience and third-person explanation.
 		</p>
+	</section>
+
+	<section class="areas">
+		<h2 id="areas">Areas of Interest</h2>
+		<ul>
+			<li>Philosophy of Mind and Cognitive Science</li>
+			<li>Philosophy of Artificial Intelligence</li>
+			<li>Feminist Philosophy</li>
+			<li>Social Ontology</li>
+		</ul>
 	</section>
 
 	<section>
@@ -66,25 +69,64 @@
 	</section>
 
 	<section>
-		<h2 id="approach">Approach</h2>
-		<p>
-			I treat theoretical frameworks as tools rather than commitments—dynamical systems theory,
-			embodied cognition, and computational modeling are useful insofar as they sharpen explanatory
-			questions. Trans experience figures in my work as a methodological resource and constraint
-			on bad theory, not as the sole object of concern. I'm interested in testing philosophical
-			claims through implementation where possible.
-		</p>
+		<h2 id="refereed-proceedings">Refereed Conference Proceedings</h2>
+		<ul class="pub-list">
+			<li>
+				<p class="pub-title">Not the Intended User: Queer Perspectives on Identity, Risk, and Trust in Robot Companions</p>
+				<p class="pub-authors">Nam, K., Yee, J., Jinnat, R.A., Rigual, K., <strong>Thylane, A.</strong>, & Korpan, R.</p>
+				<p class="pub-venue">Proceedings of the 2026 ACM/IEEE International Conference on Human-Robot Interaction (HRI '26). Edinburgh, UK.</p>
+				<p class="pub-note">Acceptance Rate: 23.2%</p>
+			</li>
+		</ul>
 	</section>
 
 	<section>
-		<h2 id="areas">Areas</h2>
-		<p>
-			Primary interests in <strong>philosophy of mind and cognitive science</strong>, especially
-			agency and selfhood over time. Secondary interests in <strong>philosophy of AI</strong>,
-			particularly questions of individuation and AI-mediated social meaning. I also draw on
-			<strong>feminist philosophy and social ontology</strong> as sources of normative constraint
-			and as high-information cases for testing theory.
-		</p>
+		<h2 id="under-review">Manuscripts Under Review</h2>
+		<ul class="pub-list">
+			<li>
+				<p class="pub-title">Pax: A Queer-Affirming Robot Companion for the Home</p>
+				<p class="pub-authors"><strong>Thylane, A.</strong>, Foulen, D., Rigual, K., Jinnat, R.A., Nam, K., Yee, J., & Korpan, R.</p>
+				<p class="pub-venue">Submitted to HRI '26 (System Demonstration Track)</p>
+			</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2 id="in-preparation">Manuscripts in Preparation</h2>
+		<ul class="pub-list">
+			<li>
+				<p class="pub-title">Embodied Cognition and Transgender Identity: A Dynamical Systems Perspective</p>
+			</li>
+			<li>
+				<p class="pub-title">Unequal Costs of Disbelief: A Spinozan Account of Propositional Rejection under Marginalization</p>
+			</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2 id="presentations">Presentations</h2>
+		<ul class="pub-list">
+			<li>
+				<p class="pub-title">Modeling Gender Identity as a Metastable Process: A 4E Cognition Framework</p>
+				<p class="pub-venue">CUNY Pipeline Symposium, The Graduate Center, CUNY</p>
+				<p class="pub-note">May 2026</p>
+			</li>
+			<li>
+				<p class="pub-title">Pax: A Queer-Affirming Robot Companion System</p>
+				<p class="pub-venue">Hunter College Humanity and Technology Series</p>
+				<p class="pub-note">December 2025</p>
+			</li>
+			<li>
+				<p class="pub-title">Can AI Have Gender? A 4E Cognition Approach to Gender Identity</p>
+				<p class="pub-venue">Poster presentation, CUNY Undergraduate Research Conference</p>
+				<p class="pub-note">May 2025</p>
+			</li>
+			<li>
+				<p class="pub-title">Can AI Have Gender? A 4E Cognition Approach to Gender Identity</p>
+				<p class="pub-venue">Oral presentation, Hunter College Undergraduate Research Conference</p>
+				<p class="pub-note">April 2025</p>
+			</li>
+		</ul>
 	</section>
 </article>
 
@@ -93,8 +135,19 @@
 		max-width: var(--max-width);
 	}
 
-	.lead {
-		font-size: 1.2rem;
+	.snapshot p {
+		font-size: 1.1rem;
+		line-height: 1.7;
+	}
+
+	.areas ul {
+		list-style: disc;
+		padding-left: 1.5rem;
+	}
+
+	.areas li {
+		margin-bottom: var(--space-sm);
+		font-size: 1.05rem;
 	}
 
 	.research-line {
@@ -117,5 +170,46 @@
 
 	.status .label {
 		font-weight: 600;
+	}
+
+	.pub-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.pub-list li {
+		margin-bottom: var(--space-lg);
+		padding-bottom: var(--space-lg);
+		border-bottom: 1px solid var(--bg-tertiary);
+	}
+
+	.pub-list li:last-child {
+		border-bottom: none;
+	}
+
+	.pub-title {
+		font-family: var(--font-serif);
+		font-size: 1.1rem;
+		font-weight: 500;
+		margin-bottom: var(--space-xs);
+	}
+
+	.pub-authors {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		margin-bottom: var(--space-xs);
+	}
+
+	.pub-venue {
+		font-style: italic;
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		margin-bottom: var(--space-xs);
+	}
+
+	.pub-note {
+		color: var(--accent-purple);
+		font-size: 0.9rem;
+		margin-bottom: 0;
 	}
 </style>
