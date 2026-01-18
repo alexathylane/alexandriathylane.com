@@ -1,6 +1,4 @@
 <script lang="ts">
-	const currentYear = new Date().getFullYear();
-
 	function openEmail() {
 		const user = 'contact';
 		const domain = 'alexandriathylane.com';
@@ -24,18 +22,20 @@
 				<span class="separator">|</span>
 				<a href="https://orcid.org/0009-0000-1657-041X" target="_blank" rel="noopener">ORCID</a>
 			</div>
-			<p class="footer-copyright text-muted">
-				{currentYear} Alexandria Thylane
-			</p>
 		</div>
 	</div>
 </footer>
 
 <style>
 	.footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
 		border-top: 1px solid var(--bg-tertiary);
-		padding: var(--space-lg) var(--space-md);
-		margin-top: auto;
+		background: var(--bg-primary);
+		padding: 0.75rem var(--space-md);
+		z-index: 100;
 	}
 
 	.footer-content {
@@ -83,10 +83,5 @@
 
 	.separator {
 		color: var(--text-muted);
-	}
-
-	.footer-copyright {
-		font-size: 0.85rem;
-		margin: 0;
 	}
 </style>

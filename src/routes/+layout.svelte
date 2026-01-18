@@ -42,6 +42,7 @@
 		margin: 0 auto;
 		width: 100%;
 		padding: var(--space-xl) var(--space-md);
+		padding-bottom: 80px;
 	}
 
 	.main-content {

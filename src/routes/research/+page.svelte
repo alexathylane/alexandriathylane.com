@@ -6,21 +6,24 @@
 <article class="research container">
 	<h1>Research</h1>
 
-	<section class="snapshot">
-		<h2 id="snapshot">Research Snapshot</h2>
+	<section class="intro">
 		<p>
-			I study how embodied agents—human or artificial—develop and sustain identity and agency across time and changing environments. Existing theories describe how agents are socially classified or self-identify, but offer incomplete accounts of the processes through which a sense of self stabilizes or shifts. I work at the intersection of philosophy of mind and cognitive science, favoring analytic and mechanistic approaches—my technical background draws me to computational modeling and to how technical systems and their users shape each other. The aim is to build integrated accounts of identity that do justice to both first-person experience and third-person explanation.
+			I study how embodied agents—human and artificial—develop and sustain identity and agency across time and changing environments. I work at the intersection of philosophy of mind and cognitive science, favoring analytic and mechanistic approaches. My technical background draws me to computational modeling and to how technical systems and their users shape each other. The aim is to build integrated accounts of identity that do justice to both first-person experience and third-person explanation.
 		</p>
 	</section>
 
 	<section class="areas">
 		<h2 id="areas">Areas of Interest</h2>
-		<ul>
-			<li>Philosophy of Mind and Cognitive Science</li>
-			<li>Philosophy of Artificial Intelligence</li>
-			<li>Feminist Philosophy</li>
-			<li>Social Ontology</li>
-		</ul>
+		<div class="areas-grid">
+			<ul>
+				<li>Philosophy of Mind & Cognitive Science</li>
+				<li>Philosophy of AI</li>
+			</ul>
+			<ul>
+				<li>Social Ontology</li>
+				<li>Feminist Philosophy</li>
+			</ul>
+		</div>
 	</section>
 
 	<section>
@@ -29,11 +32,11 @@
 		<div class="research-line">
 			<h3>Identity as Process</h3>
 			<p>
-				My thesis work argues that gender identity is best understood as a dynamically stabilized
-				regulatory process rather than a static property or social designation. Drawing on
-				dynamical systems theory, I treat transgender embodiment as a high-information case
-				that reveals how identity patterns can destabilize, reorganize, and cohere under
-				affective and social perturbation.
+				My thesis work, <em>Gender Identity as Regulatory Self-Model</em>, argues that gender identity
+				is best understood as a dynamically stabilized regulatory process rather than a static
+				property or social designation. Drawing on dynamical systems theory, I treat transgender
+				embodiment as a high-information case that reveals how identity patterns can destabilize,
+				reorganize, and cohere under affective and social perturbation.
 			</p>
 			<p class="status">
 				<span class="label">Status:</span> Manuscript in preparation
@@ -41,7 +44,7 @@
 		</div>
 
 		<div class="research-line">
-			<h3>AI and Identity Attribution</h3>
+			<h3>AI and Identity Individuation</h3>
 			<p>
 				Lead architect of the Queer Robot Companion project at Hunter College's TIER Robotics Lab.
 				The project explores what it means for AI systems to represent fluid identities—and
@@ -68,8 +71,10 @@
 		</div>
 	</section>
 
-	<section>
-		<h2 id="refereed-proceedings">Refereed Conference Proceedings</h2>
+	<section class="publications">
+		<h2 id="publications">Publications</h2>
+
+		<h3 id="refereed-proceedings">Refereed Conference Proceedings</h3>
 		<ul class="pub-list">
 			<li>
 				<p class="pub-title">Not the Intended User: Queer Perspectives on Identity, Risk, and Trust in Robot Companions</p>
@@ -78,10 +83,8 @@
 				<p class="pub-note">Acceptance Rate: 23.2%</p>
 			</li>
 		</ul>
-	</section>
 
-	<section>
-		<h2 id="under-review">Manuscripts Under Review</h2>
+		<h3 id="under-review">Manuscripts Under Review</h3>
 		<ul class="pub-list">
 			<li>
 				<p class="pub-title">Pax: A Queer-Affirming Robot Companion for the Home</p>
@@ -89,22 +92,18 @@
 				<p class="pub-venue">Submitted to HRI '26 (System Demonstration Track)</p>
 			</li>
 		</ul>
-	</section>
 
-	<section>
-		<h2 id="in-preparation">Manuscripts in Preparation</h2>
+		<h3 id="in-preparation">Manuscripts in Preparation</h3>
 		<ul class="pub-list">
 			<li>
-				<p class="pub-title">Embodied Cognition and Transgender Identity: A Dynamical Systems Perspective</p>
+				<p class="pub-title">Gender Identity as Regulatory Self-Model</p>
 			</li>
 			<li>
 				<p class="pub-title">Unequal Costs of Disbelief: A Spinozan Account of Propositional Rejection under Marginalization</p>
 			</li>
 		</ul>
-	</section>
 
-	<section>
-		<h2 id="presentations">Presentations</h2>
+		<h3 id="presentations">Presentations</h3>
 		<ul class="pub-list">
 			<li>
 				<p class="pub-title">Modeling Gender Identity as a Metastable Process: A 4E Cognition Framework</p>
@@ -118,13 +117,10 @@
 			</li>
 			<li>
 				<p class="pub-title">Can AI Have Gender? A 4E Cognition Approach to Gender Identity</p>
-				<p class="pub-venue">Poster presentation, CUNY Undergraduate Research Conference</p>
-				<p class="pub-note">May 2025</p>
-			</li>
-			<li>
-				<p class="pub-title">Can AI Have Gender? A 4E Cognition Approach to Gender Identity</p>
-				<p class="pub-venue">Oral presentation, Hunter College Undergraduate Research Conference</p>
-				<p class="pub-note">April 2025</p>
+				<ul class="venue-list">
+					<li>Poster, CUNY Undergraduate Research Conference <span class="pub-date">May 2025</span></li>
+					<li>Oral, Hunter College Undergraduate Research Conference <span class="pub-date">April 2025</span></li>
+				</ul>
 			</li>
 		</ul>
 	</section>
@@ -135,19 +131,32 @@
 		max-width: var(--max-width);
 	}
 
-	.snapshot p {
+	.intro p {
 		font-size: 1.1rem;
 		line-height: 1.7;
+	}
+
+	.areas-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-md);
 	}
 
 	.areas ul {
 		list-style: disc;
 		padding-left: 1.5rem;
+		margin: 0;
 	}
 
 	.areas li {
 		margin-bottom: var(--space-sm);
 		font-size: 1.05rem;
+	}
+
+	@media (max-width: 500px) {
+		.areas-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.research-line {
@@ -208,8 +217,28 @@
 	}
 
 	.pub-note {
-		color: var(--accent-purple);
+		color: var(--text-secondary);
 		font-size: 0.9rem;
 		margin-bottom: 0;
+	}
+
+	.venue-list {
+		list-style: none;
+		padding: 0;
+		margin: var(--space-xs) 0 0 0;
+	}
+
+	.venue-list li {
+		font-style: italic;
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		margin-bottom: var(--space-xs);
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+
+	.pub-date {
+		font-style: normal;
+		margin-left: var(--space-sm);
 	}
 </style>

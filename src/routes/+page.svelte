@@ -69,13 +69,14 @@
 			</div>
 			<div>
 				<h3>Industry</h3>
-				<p>Senior Software Engineer, Apple</p>
-				<p>Senior iOS Engineer, Reddit</p>
+				<p>Senior Software Engineer, Apple (2021–2023)</p>
+				<p>Senior iOS Engineer, Reddit (2017–2021)</p>
 			</div>
 			<div>
 				<h3>Areas</h3>
-				<p>Philosophy of Mind</p>
+				<p>Philosophy of Mind & Cognitive Science</p>
 				<p>Philosophy of AI</p>
+				<p>Social Ontology</p>
 				<p>Feminist Philosophy</p>
 			</div>
 		</div>
