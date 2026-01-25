@@ -1,0 +1,169 @@
+# Master CV data for Alexandria Thylane
+# Used by: SvelteKit website, Typst PDF template
+# Last updated: January 2026
+
+meta:
+  name: Alexandria Thylane
+  email: contact@alexandriathylane.com
+  website: https://alexandriathylane.com
+  linkedin: https://www.linkedin.com/in/alexandriathylane/
+  orcid: https://orcid.org/0009-0001-8072-4498
+  last_updated: January 2026
+
+areas:
+  - Philosophy of Mind & Cognitive Science
+  - Philosophy of AI
+  - Social Ontology
+  - Feminist Philosophy
+
+education:
+  - institution: City University of New York (CUNY Baccalaureate)
+    degree: Bachelor of Arts
+    field: Mind, Gender, and Artificial Intelligence
+    date: Expected Summer 2026
+    gpa: "3.92"
+    thesis:
+      title: "4E/DST Models of Gender Identity"
+    advisors:
+      - name: Dr. Daniel Harris
+        department: Philosophy
+      - name: Dr. Raj Korpan
+        department: Computer Science
+    graduate_coursework:
+      - course: "Representations, Attitudes, & Persuasion"
+        instructor: Eric Mandelbaum
+        term: Fall 2025
+      - course: "Group Minds"
+        instructor: Muhammad Ali Khalidi
+        term: Spring 2026
+
+  - institution: Texas State University
+    degree: Bachelor of Arts
+    field: Computer Science
+    date: "2015"
+    honors: Summa Cum Laude
+    minor: Philosophy
+
+fellowships:
+  - title: CUNY Pipeline Fellowship
+    organization: CUNY Graduate Center
+    date: 2025–2026
+  - title: Thomas W. Smith Academic Excellence Fellowship
+    organization: CUNY Baccalaureate
+    date: 2025–2026
+  - title: The Memorial Scholarship
+    organization: CUNY Baccalaureate
+    date: Spring 2025
+  - title: Diane B. Gibson Memorial Fund Award
+    organization: CUNY Baccalaureate
+    date: Fall 2025
+
+research_experience:
+  - title: Research Fellow, CUNY Pipeline Program
+    organization: CUNY Graduate Center
+    date: July 2025–Present
+    bullets:
+      - Selected for competitive doctoral preparation fellowship
+      - Developing philosophy research proposal on embodied cognition and gender identity
+      - Presenting capstone research at CUNY Pipeline Symposium (May 2026)
+
+  - title: Researcher & Lead Architect, Queer Robot Companion Project
+    organization: TIER Robotics Lab, Hunter College
+    date: June 2025–Present
+    bullets:
+      - Led technical architecture and ethical design of a queer-affirming robot companion
+      - Co-authored peer-reviewed full paper accepted to HRI 2026
+      - First author on Interactivity demo accepted to HRI 2026
+
+  - title: Undergraduate Researcher
+    organization: Department of Computer Science, Texas State University
+    date: Fall 2014
+    bullets:
+      - Designed initial experimental protocol and detection algorithm to correlate heart rate variability with sleep onset under Dr. Xiao Chen
+      - Provided proof-of-concept supporting later work published in IEEE MASS 2015
+
+teaching_experience:
+  - title: Discussion Section Leader, Intro to Women & Gender Studies
+    organization: Hunter College
+    date: Fall 2024
+    bullets:
+      - Led weekly small-group discussion section for first-year students
+      - Prepared assigned readings, facilitated discussion, and guided structured activities
+
+industry_experience:
+  - title: Senior Software Engineer
+    organization: Apple
+    date: 2021–2023
+    bullets:
+      - Implemented UI/UX improvements for macOS/iOS Music
+      - Core accessibility features on Apple TV
+
+  - title: Senior iOS Software Engineer
+    organization: Reddit
+    date: 2017–2021
+    bullets:
+      - Led front page feed re-architecture
+      - Designed and implemented first analytics and unit test frameworks
+
+service:
+  - title: Invited Panelist, Women Speak Pride
+    organization: Hetrick-Martin Institute
+    date: March 2025
+  - title: Guest Speaker, Safe Schools Program
+    organization: PFLAG NYC
+    date: 2024–2025
+  - title: Founder & Head Organizer, Queer Tech Professionals & Innovators
+    date: 2021–2023
+
+publications:
+  refereed_proceedings:
+    - title: "Not the Intended User: Queer Perspectives on Identity, Risk, and Trust in Robot Companions"
+      authors:
+        - name: "Nam, K."
+        - name: "Yee, J."
+        - name: "Jinnat, R.A."
+        - name: "Rigual, K."
+        - name: "Thylane, A."
+          self: true
+        - name: "Korpan, R."
+      venue: "Proceedings of the 2026 ACM/IEEE International Conference on Human-Robot Interaction (HRI '26)"
+      location: Edinburgh, UK
+      date: March 2026
+      acceptance_rate: "23.2%"
+
+  interactivity_demos:
+    - title: "Pax: A Queer-Affirming Robot Companion for the Home"
+      authors:
+        - name: "Thylane, A."
+          self: true
+        - name: "Foulen, D."
+        - name: "Rigual, K."
+        - name: "Jinnat, R.A."
+        - name: "Nam, K."
+        - name: "Yee, J."
+        - name: "Korpan, R."
+      venue: "ACM/IEEE International Conference on Human-Robot Interaction (HRI '26), Interactivity Track"
+      location: Edinburgh, UK
+      date: March 2026
+
+  in_preparation:
+    - title: "Gender Identity as Regulatory Self-Model"
+    - title: "Unequal Costs of Disbelief: A Spinozan Account of Propositional Rejection under Marginalization"
+
+presentations:
+  - title: "Modeling Gender Identity as a Metastable Process: A 4E Cognition Framework"
+    venues:
+      - name: "CUNY Pipeline Symposium, The Graduate Center, CUNY"
+        date: May 2026
+  - title: "Pax: A Queer-Affirming Robot Companion System"
+    venues:
+      - name: "Hunter College Humanity and Technology Series"
+        date: December 2025
+  - title: "Can AI Have Gender? A 4E Cognition Approach to Gender Identity"
+    venues:
+      - name: "CUNY Undergraduate Research Conference"
+        type: Poster
+        date: May 2025
+      - name: "Hunter College Undergraduate Research Conference"
+        type: Oral
+        date: April 2025

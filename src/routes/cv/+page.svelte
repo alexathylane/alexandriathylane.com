@@ -1,3 +1,10 @@
+<script lang="ts">
+	import type { PageData } from './$types';
+
+	let { data }: { data: PageData } = $props();
+	const { cv } = data;
+</script>
+
 <svelte:head>
 	<title>CV | Alexandria Thylane</title>
 	<meta name="description" content="Academic CV for Alexandria Thylane - philosopher of mind and cognitive scientist." />
@@ -8,157 +15,129 @@
 
 	<div class="cv-download">
 		<a href="/alexandria-thylane-cv.pdf" download class="cv-button">Download PDF</a>
-		<p class="cv-updated">Last updated January 2026</p>
+		<p class="cv-updated">Last updated {cv.meta.last_updated}</p>
 	</div>
 
 	<section>
 		<h2 id="education">Education</h2>
-		<div class="cv-entry">
-			<div class="cv-header">
-				<span class="cv-title">City University of New York (CUNY Baccalaureate)</span>
-				<span class="cv-date">Expected Summer 2026</span>
+		{#each cv.education as edu}
+			<div class="cv-entry">
+				<div class="cv-header">
+					<span class="cv-title">{edu.institution}</span>
+					<span class="cv-date">{edu.date}</span>
+				</div>
+				<p>{edu.degree}, {edu.field}{#if edu.honors} — {edu.honors}{/if}</p>
+				{#if edu.gpa}
+					<p class="cv-detail">GPA: {edu.gpa}</p>
+				{/if}
+				{#if edu.thesis}
+					<p class="cv-detail">Independent Thesis: {edu.thesis.title}</p>
+				{/if}
+				{#if edu.advisors}
+					<p class="cv-detail">Advisors: {edu.advisors.map(a => `${a.name} (${a.department})`).join(' & ')}</p>
+				{/if}
+				{#if edu.graduate_coursework}
+					<p class="cv-detail">Graduate Coursework (CUNY Graduate Center):</p>
+					<ul class="cv-bullets">
+						{#each edu.graduate_coursework as course}
+							<li>{course.course} — {course.instructor} ({course.term})</li>
+						{/each}
+					</ul>
+				{/if}
+				{#if edu.minor}
+					<p class="cv-detail">Minor in {edu.minor}</p>
+				{/if}
 			</div>
-			<p>Bachelor of Arts, Mind, Gender, and Artificial Intelligence</p>
-			<p class="cv-detail">GPA: 3.92</p>
-			<p class="cv-detail">Independent Thesis: 4E/DST Models of Gender Identity</p>
-			<p class="cv-detail">Advisors: Dr. Daniel Harris (Philosophy) & Dr. Raj Korpan (Computer Science)</p>
-			<p class="cv-detail">Graduate Coursework (CUNY Graduate Center):</p>
-			<ul class="cv-bullets">
-				<li>Representations, Attitudes, & Persuasion — Eric Mandelbaum (Fall 2025)</li>
-				<li>Group Minds — Muhammad Ali Khalidi (Spring 2026)</li>
-			</ul>
-		</div>
-
-		<div class="cv-entry">
-			<div class="cv-header">
-				<span class="cv-title">Texas State University</span>
-				<span class="cv-date">2015</span>
-			</div>
-			<p>Bachelor of Arts, Computer Science — Summa Cum Laude</p>
-			<p class="cv-detail">Minor in Philosophy</p>
-		</div>
+		{/each}
 	</section>
 
 	<section>
 		<h2 id="fellowships-honors">Fellowships & Honors</h2>
 		<ul class="cv-list">
-			<li>
-				<span class="cv-item">CUNY Pipeline Fellowship</span>
-				<span class="cv-meta">CUNY Graduate Center, 2025–2026</span>
-			</li>
-			<li>
-				<span class="cv-item">Thomas W. Smith Academic Excellence Fellowship</span>
-				<span class="cv-meta">CUNY Baccalaureate, 2025–2026</span>
-			</li>
-			<li>
-				<span class="cv-item">The Memorial Scholarship</span>
-				<span class="cv-meta">CUNY Baccalaureate, Spring 2025</span>
-			</li>
-			<li>
-				<span class="cv-item">Diane B. Gibson Memorial Fund Award</span>
-				<span class="cv-meta">CUNY Baccalaureate, Fall 2025</span>
-			</li>
+			{#each cv.fellowships as fellowship}
+				<li>
+					<span class="cv-item">{fellowship.title}</span>
+					<span class="cv-meta">{fellowship.organization}, {fellowship.date}</span>
+				</li>
+			{/each}
 		</ul>
 	</section>
 
 	<section>
 		<h2 id="research-experience">Research Experience</h2>
-		<div class="cv-entry">
-			<div class="cv-header">
-				<span class="cv-title">Research Fellow, CUNY Pipeline Program</span>
-				<span class="cv-date">July 2025–Present</span>
+		{#each cv.research_experience as exp}
+			<div class="cv-entry">
+				<div class="cv-header">
+					<span class="cv-title">{exp.title}</span>
+					<span class="cv-date">{exp.date}</span>
+				</div>
+				{#if exp.organization}
+					<p class="cv-org">{exp.organization}</p>
+				{/if}
+				{#if exp.bullets}
+					<ul class="cv-bullets">
+						{#each exp.bullets as bullet}
+							<li>{bullet}</li>
+						{/each}
+					</ul>
+				{/if}
 			</div>
-			<p class="cv-org">CUNY Graduate Center</p>
-			<ul class="cv-bullets">
-				<li>Selected for competitive doctoral preparation fellowship</li>
-				<li>Developing philosophy research proposal on embodied cognition and gender identity</li>
-				<li>Presenting capstone research at CUNY Pipeline Symposium (May 2026)</li>
-			</ul>
-		</div>
-
-		<div class="cv-entry">
-			<div class="cv-header">
-				<span class="cv-title">Researcher & Lead Architect, Queer Robot Companion Project</span>
-				<span class="cv-date">June 2025–Present</span>
-			</div>
-			<p class="cv-org">TIER Robotics Lab, Hunter College</p>
-			<ul class="cv-bullets">
-				<li>Led technical architecture and ethical design of a queer-affirming robot companion</li>
-				<li>Co-authored peer-reviewed full paper accepted to HRI 2026</li>
-				<li>Authored system demonstration paper (currently under review)</li>
-			</ul>
-		</div>
-
-		<div class="cv-entry">
-			<div class="cv-header">
-				<span class="cv-title">Undergraduate Researcher</span>
-				<span class="cv-date">Fall 2014</span>
-			</div>
-			<p class="cv-org">Department of Computer Science, Texas State University</p>
-			<ul class="cv-bullets">
-				<li>Designed initial experimental protocol and detection algorithm to correlate heart rate variability with sleep onset under Dr. Xiao Chen</li>
-				<li>Provided proof-of-concept supporting later work published in IEEE MASS 2015</li>
-			</ul>
-		</div>
+		{/each}
 	</section>
 
 	<section>
 		<h2 id="teaching-experience">Teaching Experience</h2>
-		<div class="cv-entry">
-			<div class="cv-header">
-				<span class="cv-title">Discussion Section Leader, Intro to Women & Gender Studies</span>
-				<span class="cv-date">Fall 2024</span>
+		{#each cv.teaching_experience as exp}
+			<div class="cv-entry">
+				<div class="cv-header">
+					<span class="cv-title">{exp.title}</span>
+					<span class="cv-date">{exp.date}</span>
+				</div>
+				{#if exp.organization}
+					<p class="cv-org">{exp.organization}</p>
+				{/if}
+				{#if exp.bullets}
+					<ul class="cv-bullets">
+						{#each exp.bullets as bullet}
+							<li>{bullet}</li>
+						{/each}
+					</ul>
+				{/if}
 			</div>
-			<p class="cv-org">Hunter College</p>
-			<ul class="cv-bullets">
-				<li>Led weekly small-group discussion section for first-year students</li>
-				<li>Prepared assigned readings, facilitated discussion, and guided structured activities</li>
-			</ul>
-		</div>
+		{/each}
 	</section>
 
 	<section>
 		<h2 id="industry-experience">Industry Experience</h2>
-		<div class="cv-entry">
-			<div class="cv-header">
-				<span class="cv-title">Senior Software Engineer</span>
-				<span class="cv-date">2021–2023</span>
+		{#each cv.industry_experience as exp}
+			<div class="cv-entry">
+				<div class="cv-header">
+					<span class="cv-title">{exp.title}</span>
+					<span class="cv-date">{exp.date}</span>
+				</div>
+				{#if exp.organization}
+					<p class="cv-org">{exp.organization}</p>
+				{/if}
+				{#if exp.bullets}
+					<ul class="cv-bullets">
+						{#each exp.bullets as bullet}
+							<li>{bullet}</li>
+						{/each}
+					</ul>
+				{/if}
 			</div>
-			<p class="cv-org">Apple</p>
-			<ul class="cv-bullets">
-				<li>Implemented UI/UX improvements for macOS/iOS Music</li>
-				<li>Core accessibility features on Apple TV</li>
-			</ul>
-		</div>
-
-		<div class="cv-entry">
-			<div class="cv-header">
-				<span class="cv-title">Senior iOS Software Engineer</span>
-				<span class="cv-date">2017–2021</span>
-			</div>
-			<p class="cv-org">Reddit</p>
-			<ul class="cv-bullets">
-				<li>Led front page feed re-architecture</li>
-				<li>Designed and implemented first analytics and unit test frameworks</li>
-			</ul>
-		</div>
+		{/each}
 	</section>
 
 	<section>
 		<h2 id="service-engagement">Service & Engagement</h2>
 		<ul class="cv-list">
-			<li>
-				<span class="cv-item">Invited Panelist, Women Speak Pride</span>
-				<span class="cv-meta">Hetrick-Martin Institute, March 2025</span>
-			</li>
-			<li>
-				<span class="cv-item">Guest Speaker, Safe Schools Program</span>
-				<span class="cv-meta">PFLAG NYC, 2024–2025</span>
-			</li>
-			<li>
-				<span class="cv-item">Founder & Head Organizer, Queer Tech Professionals & Innovators</span>
-				<span class="cv-meta">2021–2023</span>
-			</li>
+			{#each cv.service as item}
+				<li>
+					<span class="cv-item">{item.title}</span>
+					<span class="cv-meta">{#if item.organization}{item.organization}, {/if}{item.date}</span>
+				</li>
+			{/each}
 		</ul>
 	</section>
 </article>

@@ -1,3 +1,16 @@
+<script lang="ts">
+	import type { PageData } from './$types';
+	import { renderAuthorsHtml } from '$lib/cv';
+
+	let { data }: { data: PageData } = $props();
+	const { publications, presentations, areas } = data;
+
+	// Split areas into two columns
+	const midpoint = Math.ceil(areas.length / 2);
+	const areasCol1 = areas.slice(0, midpoint);
+	const areasCol2 = areas.slice(midpoint);
+</script>
+
 <svelte:head>
 	<title>Research | Alexandria Thylane</title>
 	<meta name="description" content="Research on embodied identity, dynamical systems approaches to gender, and AI systems that represent human identity." />
@@ -16,12 +29,14 @@
 		<h2 id="areas">Areas of Interest</h2>
 		<div class="areas-grid">
 			<ul>
-				<li>Philosophy of Mind & Cognitive Science</li>
-				<li>Philosophy of AI</li>
+				{#each areasCol1 as area}
+					<li>{area}</li>
+				{/each}
 			</ul>
 			<ul>
-				<li>Social Ontology</li>
-				<li>Feminist Philosophy</li>
+				{#each areasCol2 as area}
+					<li>{area}</li>
+				{/each}
 			</ul>
 		</div>
 	</section>
@@ -76,52 +91,65 @@
 
 		<h3 id="refereed-proceedings">Refereed Conference Proceedings</h3>
 		<ul class="pub-list">
-			<li>
-				<p class="pub-title">Not the Intended User: Queer Perspectives on Identity, Risk, and Trust in Robot Companions</p>
-				<p class="pub-authors">Nam, K., Yee, J., Jinnat, R.A., Rigual, K., <strong>Thylane, A.</strong>, & Korpan, R.</p>
-				<p class="pub-venue">Proceedings of the 2026 ACM/IEEE International Conference on Human-Robot Interaction (HRI '26). Edinburgh, UK.</p>
-				<p class="pub-note">Acceptance Rate: 23.2%</p>
-			</li>
+			{#each publications.refereed_proceedings as pub}
+				<li>
+					<p class="pub-title">{pub.title}</p>
+					{#if pub.authors}
+						<p class="pub-authors">{@html renderAuthorsHtml(pub.authors)}</p>
+					{/if}
+					{#if pub.venue}
+						<p class="pub-venue">{pub.venue}. {pub.location}.</p>
+					{/if}
+					{#if pub.acceptance_rate}
+						<p class="pub-note">Acceptance Rate: {pub.acceptance_rate}</p>
+					{/if}
+				</li>
+			{/each}
 		</ul>
 
 		<h3 id="interactivity-demos">Interactivity Demos</h3>
 		<ul class="pub-list">
-			<li>
-				<p class="pub-title">Pax: A Queer-Affirming Robot Companion for the Home</p>
-				<p class="pub-authors"><strong>Thylane, A.</strong>, Foulen, D., Rigual, K., Jinnat, R.A., Nam, K., Yee, J., & Korpan, R.</p>
-				<p class="pub-venue">ACM/IEEE International Conference on Human-Robot Interaction (HRI '26), Interactivity Track. Edinburgh, UK. March 2026.</p>
-			</li>
+			{#each publications.interactivity_demos as pub}
+				<li>
+					<p class="pub-title">{pub.title}</p>
+					{#if pub.authors}
+						<p class="pub-authors">{@html renderAuthorsHtml(pub.authors)}</p>
+					{/if}
+					{#if pub.venue}
+						<p class="pub-venue">{pub.venue}. {pub.location}. {pub.date}.</p>
+					{/if}
+				</li>
+			{/each}
 		</ul>
 
 		<h3 id="in-preparation">Manuscripts in Preparation</h3>
 		<ul class="pub-list">
-			<li>
-				<p class="pub-title">Gender Identity as Regulatory Self-Model</p>
-			</li>
-			<li>
-				<p class="pub-title">Unequal Costs of Disbelief: A Spinozan Account of Propositional Rejection under Marginalization</p>
-			</li>
+			{#each publications.in_preparation as pub}
+				<li>
+					<p class="pub-title">{pub.title}</p>
+				</li>
+			{/each}
 		</ul>
+	</section>
 
-		<h3 id="presentations">Presentations</h3>
+	<section class="presentations">
+		<h2 id="presentations">Presentations</h2>
 		<ul class="pub-list">
-			<li>
-				<p class="pub-title">Modeling Gender Identity as a Metastable Process: A 4E Cognition Framework</p>
-				<p class="pub-venue">CUNY Pipeline Symposium, The Graduate Center, CUNY</p>
-				<p class="pub-note">May 2026</p>
-			</li>
-			<li>
-				<p class="pub-title">Pax: A Queer-Affirming Robot Companion System</p>
-				<p class="pub-venue">Hunter College Humanity and Technology Series</p>
-				<p class="pub-note">December 2025</p>
-			</li>
-			<li>
-				<p class="pub-title">Can AI Have Gender? A 4E Cognition Approach to Gender Identity</p>
-				<ul class="venue-list">
-					<li>Poster, CUNY Undergraduate Research Conference <span class="pub-date">May 2025</span></li>
-					<li>Oral, Hunter College Undergraduate Research Conference <span class="pub-date">April 2025</span></li>
-				</ul>
-			</li>
+			{#each presentations as pres}
+				<li>
+					<p class="pub-title">{pres.title}</p>
+					{#if pres.venues && pres.venues.length === 1}
+						<p class="pub-venue">{pres.venues[0].name}</p>
+						<p class="pub-note">{pres.venues[0].date}</p>
+					{:else if pres.venues && pres.venues.length > 1}
+						<ul class="venue-list">
+							{#each pres.venues as venue}
+								<li>{#if venue.type}{venue.type}, {/if}{venue.name} <span class="pub-date">{venue.date}</span></li>
+							{/each}
+						</ul>
+					{/if}
+				</li>
+			{/each}
 		</ul>
 	</section>
 </article>

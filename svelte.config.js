@@ -12,7 +12,10 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+		alias: {
+			$data: 'src/data'
+		}
 	}
 };
 

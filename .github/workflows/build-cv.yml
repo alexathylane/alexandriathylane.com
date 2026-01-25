@@ -1,0 +1,38 @@
+name: Build CV PDF
+
+on:
+  push:
+    paths:
+      - 'src/data/cv.yaml'
+      - 'templates/cv.typ'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+
+      - name: Build CV PDF
+        run: typst compile --root . templates/cv.typ static/alexandria-thylane-cv.pdf
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet static/alexandria-thylane-cv.pdf || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit updated PDF
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/alexandria-thylane-cv.pdf
+          git commit -m "chore: rebuild CV PDF from updated source"
+          git push
