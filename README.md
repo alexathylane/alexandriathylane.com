@@ -42,24 +42,37 @@ alexandriathylane.com/
 │   ├── app.css                 # Global styles & CSS variables
 │   ├── app.d.ts                # TypeScript declarations
 │   ├── app.html                # HTML template
+│   ├── data/
+│   │   └── cv.yaml             # Master CV data (single source of truth)
 │   ├── lib/
+│   │   ├── cv.ts               # YAML loader + helpers
+│   │   ├── types/
+│   │   │   └── cv.ts           # TypeScript interfaces for CV data
 │   │   └── components/
 │   │       ├── Nav.svelte      # Navigation header
 │   │       ├── Footer.svelte   # Site footer with contact links
+│   │       ├── TableOfContents.svelte
 │   │       └── ThemeToggle.svelte  # Dark/light mode switch
 │   └── routes/
 │       ├── +layout.svelte      # Root layout (Nav + Footer wrapper)
 │       ├── +layout.ts          # Enables prerendering
 │       ├── +page.svelte        # Home page
-│       ├── cv/+page.svelte     # CV page
-│       ├── research/+page.svelte
-│       ├── publications/+page.svelte
+│       ├── cv/
+│       │   ├── +page.svelte    # CV page (consumes cv.yaml)
+│       │   └── +page.ts        # Load function
+│       ├── research/
+│       │   ├── +page.svelte    # Research + publications (consumes cv.yaml)
+│       │   └── +page.ts        # Load function
 │       └── projects/+page.svelte
+├── templates/
+│   └── cv.typ                  # Typst template for PDF generation
 ├── static/
 │   ├── headshot.jpg            # Profile photo
-│   ├── alexandria-thylane-cv.pdf
+│   ├── alexandria-thylane-cv.pdf  # Generated from cv.yaml
 │   ├── favicon.svg
 │   └── robots.txt              # SEO config (blocks AI crawlers)
+├── .github/workflows/
+│   └── build-cv.yml            # Auto-rebuild PDF on cv.yaml changes
 ├── build/                      # Production output (gitignored)
 ├── svelte.config.js            # SvelteKit configuration
 ├── vite.config.ts              # Vite configuration
@@ -104,11 +117,75 @@ alexandriathylane.com/
 | Route | Purpose |
 |-------|---------|
 | `/` | Home — intro, current roles, background, engagement |
-| `/research` | Research lines: identity, AI, cognitive architecture |
-| `/publications` | Academic papers, presentations |
+| `/research` | Research lines, publications, presentations |
 | `/cv` | Curriculum vitae with PDF download |
 | `/projects` | Technical and research projects |
 | External: `notes.alexandriathylane.com` | Digital garden |
+
+---
+
+## CV Pipeline
+
+The CV uses a **single source of truth** pattern: one YAML file generates both the website pages and PDF.
+
+```
+src/data/cv.yaml          ← Edit this file
+        │
+        ├──► Website (CV page, Research page)
+        │
+        └──► Typst template → PDF
+```
+
+### Updating CV Content
+
+1. **Edit `src/data/cv.yaml`** — all CV data lives here
+2. **Push to main** — GitHub Actions auto-rebuilds the PDF
+3. **Vercel deploys** — website updates automatically
+
+### YAML Structure
+
+```yaml
+meta:           # name, email, website, last_updated
+areas:          # research interests
+education:      # degrees with optional thesis, advisors, coursework
+fellowships:    # awards and honors
+research_experience:
+teaching_experience:
+industry_experience:
+service:        # service and engagement
+publications:
+  refereed_proceedings:
+  interactivity_demos:
+  in_preparation:
+presentations:  # conference talks, posters (separate from publications)
+```
+
+### Author Highlighting
+
+To bold your name in author lists, use `self: true`:
+
+```yaml
+authors:
+  - name: "Thylane, A."
+    self: true
+  - name: "Korpan, R."
+```
+
+### Local PDF Generation
+
+```bash
+# Requires Typst: brew install typst
+typst compile --root . templates/cv.typ static/alexandria-thylane-cv.pdf
+```
+
+### Key Files
+
+| File | Purpose |
+|------|---------|
+| `src/data/cv.yaml` | Master CV data |
+| `templates/cv.typ` | Typst PDF template |
+| `src/lib/types/cv.ts` | TypeScript interfaces |
+| `.github/workflows/build-cv.yml` | Auto-rebuild PDF on push |
 
 ---
 
