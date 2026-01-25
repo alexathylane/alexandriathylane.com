@@ -5,8 +5,6 @@ export const prerender = true;
 
 export const load: PageLoad = () => {
 	return {
-		publications: cv.publications,
-		presentations: cv.presentations,
 		areas: cv.areas
 	};
 };

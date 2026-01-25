@@ -73,7 +73,7 @@
 				<p>Senior iOS Engineer, Reddit (2017–2021)</p>
 			</div>
 			<div>
-				<h3>Areas</h3>
+				<h3>Areas of Interest</h3>
 				<p>Philosophy of Mind & Cognitive Science</p>
 				<p>Philosophy of AI</p>
 				<p>Social Ontology</p>

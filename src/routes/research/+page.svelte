@@ -1,9 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { renderAuthorsHtml } from '$lib/cv';
 
 	let { data }: { data: PageData } = $props();
-	const { publications, presentations, areas } = data;
+	const { areas } = data;
 
 	// Split areas into two columns
 	const midpoint = Math.ceil(areas.length / 2);
@@ -86,71 +85,21 @@
 		</div>
 	</section>
 
-	<section class="publications">
-		<h2 id="publications">Publications</h2>
-
-		<h3 id="refereed-proceedings">Refereed Conference Proceedings</h3>
-		<ul class="pub-list">
-			{#each publications.refereed_proceedings as pub}
-				<li>
-					<p class="pub-title">{pub.title}</p>
-					{#if pub.authors}
-						<p class="pub-authors">{@html renderAuthorsHtml(pub.authors)}</p>
-					{/if}
-					{#if pub.venue}
-						<p class="pub-venue">{pub.venue}. {pub.location}.</p>
-					{/if}
-					{#if pub.acceptance_rate}
-						<p class="pub-note">Acceptance Rate: {pub.acceptance_rate}</p>
-					{/if}
-				</li>
-			{/each}
-		</ul>
-
-		<h3 id="interactivity-demos">Interactivity Demos</h3>
-		<ul class="pub-list">
-			{#each publications.interactivity_demos as pub}
-				<li>
-					<p class="pub-title">{pub.title}</p>
-					{#if pub.authors}
-						<p class="pub-authors">{@html renderAuthorsHtml(pub.authors)}</p>
-					{/if}
-					{#if pub.venue}
-						<p class="pub-venue">{pub.venue}. {pub.location}. {pub.date}.</p>
-					{/if}
-				</li>
-			{/each}
-		</ul>
-
-		<h3 id="in-preparation">Manuscripts in Preparation</h3>
-		<ul class="pub-list">
-			{#each publications.in_preparation as pub}
-				<li>
-					<p class="pub-title">{pub.title}</p>
-				</li>
-			{/each}
-		</ul>
-	</section>
-
-	<section class="presentations">
-		<h2 id="presentations">Presentations</h2>
-		<ul class="pub-list">
-			{#each presentations as pres}
-				<li>
-					<p class="pub-title">{pres.title}</p>
-					{#if pres.venues && pres.venues.length === 1}
-						<p class="pub-venue">{pres.venues[0].name}</p>
-						<p class="pub-note">{pres.venues[0].date}</p>
-					{:else if pres.venues && pres.venues.length > 1}
-						<ul class="venue-list">
-							{#each pres.venues as venue}
-								<li>{#if venue.type}{venue.type}, {/if}{venue.name} <span class="pub-date">{venue.date}</span></li>
-							{/each}
-						</ul>
-					{/if}
-				</li>
-			{/each}
-		</ul>
+	<section class="output-links">
+		<h2 id="output">Research Output</h2>
+		<p>
+			For a complete list of publications and presentations, see my <a href="/cv#publications">CV</a>.
+		</p>
+		<div class="link-cards">
+			<a href="/cv#publications" class="link-card">
+				<span class="link-title">Publications</span>
+				<span class="link-desc">Conference papers, demos, and manuscripts</span>
+			</a>
+			<a href="/cv#presentations" class="link-card">
+				<span class="link-title">Presentations</span>
+				<span class="link-desc">Conference talks and posters</span>
+			</a>
+		</div>
 	</section>
 </article>
 
@@ -209,64 +158,43 @@
 		font-weight: 600;
 	}
 
-	.pub-list {
-		list-style: none;
-		padding: 0;
+	.output-links p {
+		margin-bottom: var(--space-md);
 	}
 
-	.pub-list li {
-		margin-bottom: var(--space-lg);
-		padding-bottom: var(--space-lg);
-		border-bottom: 1px solid var(--bg-tertiary);
+	.link-cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--space-md);
 	}
 
-	.pub-list li:last-child {
-		border-bottom: none;
+	.link-card {
+		display: flex;
+		flex-direction: column;
+		padding: var(--space-md);
+		background: var(--bg-secondary);
+		border-radius: 8px;
+		border: 1px solid var(--bg-tertiary);
+		transition: border-color var(--transition-fast);
 	}
 
-	.pub-title {
-		font-family: var(--font-serif);
-		font-size: 1.1rem;
-		font-weight: 500;
+	.link-card:hover {
+		border-color: var(--accent-purple);
+	}
+
+	.link-title {
+		font-weight: 600;
 		margin-bottom: var(--space-xs);
 	}
 
-	.pub-authors {
-		color: var(--text-secondary);
-		font-size: 0.95rem;
-		margin-bottom: var(--space-xs);
-	}
-
-	.pub-venue {
-		font-style: italic;
-		color: var(--text-secondary);
-		font-size: 0.95rem;
-		margin-bottom: var(--space-xs);
-	}
-
-	.pub-note {
-		color: var(--text-secondary);
+	.link-desc {
 		font-size: 0.9rem;
-		margin-bottom: 0;
-	}
-
-	.venue-list {
-		list-style: none;
-		padding: 0;
-		margin: var(--space-xs) 0 0 0;
-	}
-
-	.venue-list li {
-		font-style: italic;
 		color: var(--text-secondary);
-		font-size: 0.95rem;
-		margin-bottom: var(--space-xs);
-		padding-bottom: 0;
-		border-bottom: none;
 	}
 
-	.pub-date {
-		font-style: normal;
-		margin-left: var(--space-sm);
+	@media (max-width: 500px) {
+		.link-cards {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

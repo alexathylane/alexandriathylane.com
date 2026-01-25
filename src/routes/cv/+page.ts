@@ -4,5 +4,9 @@ import type { PageLoad } from './$types';
 export const prerender = true;
 
 export const load: PageLoad = () => {
-	return { cv };
+	return {
+		cv,
+		publications: cv.publications,
+		presentations: cv.presentations
+	};
 };
