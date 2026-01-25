@@ -44,11 +44,21 @@
 		</p>
 		<p>
 			I am a multiracial transgender woman, born and raised in San Antonio, Texas, and currently
-			based in New York City after seven years in the San Francisco Bay Area. I publish under the
-			chosen name Alexandria Thylane; my surname is Rohn. <em>Thylane</em> is a modern French
-			spelling inspired by the Vietnamese names Thủy ("water") and Lan ("orchid").
+			based in New York City after seven years in the San Francisco Bay Area.
 		</p>
 	</section>
+
+	<aside class="name-callout">
+		<h3>What's in a name?</h3>
+		<p>
+			I publish under the chosen name <strong>Alexandria Thylane</strong>; my surname is Rohn.
+		</p>
+		<p>
+			<em>Thylane</em> <span class="pronunciation">(tee-LAHN)</span> is a modern French spelling
+			inspired by the Vietnamese names <span class="viet">Th&#7911;y</span> ("water") and
+			<span class="viet">Lan</span> ("orchid").
+		</p>
+	</aside>
 
 	<section class="current">
 		<h2 id="current">Current</h2>
@@ -162,6 +172,58 @@
 		font-size: 1.1rem;
 	}
 
+	.name-callout {
+		position: relative;
+		margin-bottom: var(--space-xl);
+		padding: var(--space-lg) var(--space-xl);
+		background: linear-gradient(135deg, var(--bg-secondary) 0%, transparent 100%);
+		border-radius: 12px;
+		border: 1px solid var(--bg-tertiary);
+	}
+
+	.name-callout::before {
+		content: '"';
+		position: absolute;
+		top: 12px;
+		left: 20px;
+		font-family: var(--font-serif);
+		font-size: 4rem;
+		line-height: 1;
+		color: var(--accent-purple);
+		opacity: 0.3;
+	}
+
+	.name-callout h3 {
+		font-family: var(--font-serif);
+		font-style: italic;
+		font-weight: 400;
+		font-size: 1.1rem;
+		color: var(--accent-purple);
+		margin-top: 0;
+		margin-bottom: var(--space-md);
+	}
+
+	.name-callout p {
+		font-size: 0.95rem;
+		color: var(--text-secondary);
+		margin-bottom: var(--space-sm);
+	}
+
+	.name-callout p:last-child {
+		margin-bottom: 0;
+	}
+
+	.pronunciation {
+		font-family: var(--font-mono, monospace);
+		font-size: 0.85em;
+		color: var(--text-muted);
+		margin-left: 0.25em;
+	}
+
+	.viet {
+		font-style: normal;
+	}
+
 	section {
 		margin-bottom: var(--space-xl);
 	}
@@ -236,6 +298,16 @@
 
 		.bg-grid {
 			grid-template-columns: 1fr;
+		}
+
+		.name-callout {
+			padding: var(--space-md);
+		}
+
+		.name-callout::before {
+			font-size: 3rem;
+			top: -4px;
+			left: 12px;
 		}
 	}
 </style>
