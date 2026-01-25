@@ -52,7 +52,7 @@
 				versus merely simulate its cues.
 			</p>
 			<p class="status">
-				<span class="label">Status:</span> HRI '26 paper accepted; system demo under review
+				<span class="label">Status:</span> HRI '26 paper accepted; Interactivity demo accepted
 			</p>
 		</div>
 
@@ -84,12 +84,12 @@
 			</li>
 		</ul>
 
-		<h3 id="under-review">Manuscripts Under Review</h3>
+		<h3 id="interactivity-demos">Interactivity Demos</h3>
 		<ul class="pub-list">
 			<li>
 				<p class="pub-title">Pax: A Queer-Affirming Robot Companion for the Home</p>
 				<p class="pub-authors"><strong>Thylane, A.</strong>, Foulen, D., Rigual, K., Jinnat, R.A., Nam, K., Yee, J., & Korpan, R.</p>
-				<p class="pub-venue">Submitted to HRI '26 (System Demonstration Track)</p>
+				<p class="pub-venue">ACM/IEEE International Conference on Human-Robot Interaction (HRI '26), Interactivity Track. Edinburgh, UK. March 2026.</p>
 			</li>
 		</ul>
 

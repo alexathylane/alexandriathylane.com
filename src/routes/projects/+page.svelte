@@ -26,7 +26,7 @@
 		</p>
 		<ul class="project-outcomes">
 			<li>Full paper accepted to HRI '26 (23.2% acceptance rate)</li>
-			<li>System demonstration under review</li>
+			<li>Interactivity demo accepted to HRI '26</li>
 		</ul>
 	</section>
 
